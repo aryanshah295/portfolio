@@ -1,6 +1,13 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useRef } from 'react'
+import { Ovo } from "next/font/google";
+
+// Initialize it (yes, again)
+const ovo = Ovo({
+  subsets: ["latin"],
+  weight: ["400"]
+});
 
 const Navbar = () => {
 
@@ -24,11 +31,11 @@ const Navbar = () => {
         </a>
 
         <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity50 '>
-            <li><a href="#top" className='font-Ovo'>Home</a></li>
-            <li><a href="#about" className='font-Ovo'>About me</a></li>
-            <li><a href="#services" className='font-Ovo'>Services</a></li>
-            <li><a href="#work" className='font-Ovo'>My Work</a></li>
-            <li><a href="#contact" className='font-Ovo'>Contact me</a></li>
+            <li><a href="#top" className={ovo.className}>Home</a></li>
+            <li><a href="#about" className={ovo.className}>About me</a></li>
+            <li><a href="#services" className={ovo.className}>Services</a></li>
+            <li><a href="#work" className={ovo.className}>My Work</a></li>
+            <li><a href="#contact" className={ovo.className}>Contact me</a></li>
         </ul>
 
         <div className='flex items-center gap-4'>
@@ -53,11 +60,11 @@ const Navbar = () => {
                 <Image src={assets.close_black} alt='' className='w-5 cursor-pointer'/>
             </div>
             
-            <li><a href="#top" onClick={closeMenu} className='font-Ovo'>Home</a></li>
-            <li><a href="#about" onClick={closeMenu} className='font-Ovo'>About me</a></li>
-            <li><a href="#services" onClick={closeMenu} className='font-Ovo'>Services</a></li>
-            <li><a href="#work" onClick={closeMenu} className='font-Ovo'>My Work</a></li>
-            <li><a href="#contact" onClick={closeMenu} className='font-Ovo'>Contact me</a></li>
+            <li><a href="#top" onClick={closeMenu} className={ovo.className}>Home</a></li>
+            <li><a href="#about" onClick={closeMenu} className={ovo.className}>About me</a></li>
+            <li><a href="#services" onClick={closeMenu} className={ovo.className}>Services</a></li>
+            <li><a href="#work" onClick={closeMenu} className={ovo.className}>My Work</a></li>
+            <li><a href="#contact" onClick={closeMenu} className={ovo.className}>Contact me</a></li>
         </ul>
 
       </nav>
